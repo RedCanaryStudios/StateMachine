@@ -12,9 +12,9 @@ Usage:
 
 `SM:CreateState(state)` // Creates a state.  
 
-`SM:Link(Name, To, From)` // Links a before state with an after state with an event.  
+`SM:Link(name, to, from)` // Links a before state with an after state with an event.  
 
-`SM:PushState(Event)` // When :PushState is invoked, 'Name' event will be invoked. If the current state is "To" the state will be changed into "From". 
+`SM:PushState(event)` // When :PushState is invoked, 'Name' event will be invoked. If the current state is "To" the state will be changed into "From". 
 
 `SM:StateChanged(func)` // Provide a callback when the state changes. The callback will have 2 parameters: Before & After state.  
 
