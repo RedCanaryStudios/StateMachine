@@ -17,11 +17,10 @@ function stateMachine.new(default)
     PushState = function(self, name)
       for k, v in pairs(self._Info.Links) do
         if k == name and self:GetState() == v[1] then
-          local oldState = self:GetState()
           self._Info.cState = v[2]
           self._Info.StateChangeCallback(v[2])
-          self._Info.States[self._Info.cState][1](oldState, v[2])
-          self._Info.States[self._Info.cState][2](oldState, v[2])
+          self._Info.States[self._Info.cState][1](v[1], v[2])
+          self._Info.States[self._Info.cState][2](v[1], v[2])
           return
         end
       end
