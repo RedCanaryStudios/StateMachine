@@ -1,13 +1,3 @@
-_G.Info = [[
-
-   ©2021 Red Canary Studios
-   
-    -- // discord.canary.red \\ --
-    
-    A StateMachine module.
-
-]]
-
 local stateMachine = {}
 
 function stateMachine.new(default)
